@@ -1,0 +1,42 @@
+2025-01-22 21:45:19,575 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250122_214519.log
+2025-01-22 21:45:20,868 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250122_214520.log
+2025-01-22 21:45:20,871 - logging_config - INFO - Starting application
+2025-01-22 21:45:20,871 - logging_config - INFO - Command line arguments: Namespace(url='https://docs.flytbase.com/', dir=None)
+2025-01-22 21:45:20,871 - __main__.ChatInterface - INFO - Initializing chat interface
+2025-01-22 21:45:20,871 - __main__.ChatInterface - INFO - Using web knowledge base: https://docs.flytbase.com/
+2025-01-22 21:45:20,873 - rag_agent.agent.WebKnowledgeBase - INFO - Initialized WebKnowledgeBase with base URL: https://docs.flytbase.com
+2025-01-22 21:45:20,874 - rag_agent.agent.WebKnowledgeBase - INFO - Loading cached content from knowledge_cache\docs_flytbase_com_cache.pkl
+2025-01-22 21:45:20,875 - rag_agent.agent.RAGAgent - INFO - Initializing RAG Agent
+2025-01-22 21:45:25,017 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-01-22 21:45:25,017 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-01-22 21:45:28,174 - rag_agent.agent.RAGAgent - INFO - Using web-based knowledge source
+2025-01-22 21:45:28,175 - rag_agent.agent.RAGAgent - INFO - Setting up vector store
+2025-01-22 21:45:28,175 - rag_agent.agent.RAGAgent - INFO - Using cached index from 2025-01-22 21:36:00.810463
+2025-01-22 21:45:28,178 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-01-22 21:45:28,195 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-01-22 21:45:28,204 - rag_agent.agent.RAGAgent - INFO - Successfully loaded cached FAISS index
+2025-01-22 21:45:28,205 - __main__.ChatInterface - INFO - RAG agent initialized successfully
+2025-01-22 21:45:28,205 - __main__.ChatInterface - INFO - Starting chat interface
+2025-01-22 21:45:28,206 - __main__.ChatInterface - INFO - Welcome message displayed
+2025-01-22 21:45:43,942 - __main__.ChatInterface - INFO - Processing user input: explain me what is mission planning
+2025-01-22 21:45:43,942 - rag_agent.agent.RAGAgent - INFO - Processing user query: explain me what is mission planning
+2025-01-22 21:45:43,943 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: explain me what is mission planning
+2025-01-22 21:45:44,056 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:45:44,056 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:46:37,700 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-01-22 21:46:37,700 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-01-22 21:46:53,280 - __main__.ChatInterface - INFO - Processing user input: explain me grid missions in depth
+2025-01-22 21:46:53,280 - rag_agent.agent.RAGAgent - INFO - Processing user query: explain me grid missions in depth
+2025-01-22 21:46:53,281 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: explain me grid missions in depth
+2025-01-22 21:46:53,333 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:46:53,334 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:48:09,162 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-01-22 21:48:09,162 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-01-22 21:48:28,418 - __main__.ChatInterface - INFO - Processing user input: what are flinks?
+2025-01-22 21:48:28,418 - rag_agent.agent.RAGAgent - INFO - Processing user query: what are flinks?
+2025-01-22 21:48:28,419 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: what are flinks?
+2025-01-22 21:48:28,468 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:48:28,468 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:49:06,689 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-01-22 21:49:06,690 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-01-22 21:53:41,971 - __main__.ChatInterface - INFO - User requested to exit

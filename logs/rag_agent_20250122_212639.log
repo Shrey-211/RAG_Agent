@@ -1,0 +1,41 @@
+2025-01-22 21:26:39,247 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250122_212639.log
+2025-01-22 21:26:40,591 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250122_212640.log
+2025-01-22 21:26:40,591 - logging_config - INFO - Starting application
+2025-01-22 21:26:40,595 - logging_config - INFO - Command line arguments: Namespace(url='https://docs.flytbase.com/', dir=None)
+2025-01-22 21:26:40,595 - __main__.ChatInterface - INFO - Initializing chat interface
+2025-01-22 21:26:40,595 - __main__.ChatInterface - INFO - Using web knowledge base: https://docs.flytbase.com/
+2025-01-22 21:26:40,596 - rag_agent.agent.WebKnowledgeBase - INFO - Initialized WebKnowledgeBase with base URL: https://docs.flytbase.com
+2025-01-22 21:26:40,596 - rag_agent.agent.WebKnowledgeBase - INFO - Loading cached content from knowledge_cache\docs_flytbase_com_cache.pkl
+2025-01-22 21:26:40,596 - rag_agent.agent.RAGAgent - INFO - Initializing RAG Agent
+2025-01-22 21:26:44,737 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-01-22 21:26:44,737 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-01-22 21:26:47,687 - rag_agent.agent.RAGAgent - INFO - Using web-based knowledge source
+2025-01-22 21:26:47,688 - rag_agent.agent.RAGAgent - INFO - Setting up vector store
+2025-01-22 21:26:47,688 - rag_agent.agent.RAGAgent - INFO - No cached index found, will build new one
+2025-01-22 21:26:47,688 - rag_agent.agent.RAGAgent - INFO - Fetching content from web knowledge base
+2025-01-22 21:26:47,688 - rag_agent.agent.WebKnowledgeBase - INFO - Getting all content from knowledge base
+2025-01-22 21:26:47,688 - rag_agent.agent.WebKnowledgeBase - INFO - Using cached content for https://docs.flytbase.com/
+2025-01-22 21:26:47,688 - rag_agent.agent.WebKnowledgeBase - INFO - Retrieved 291794 characters of content
+2025-01-22 21:26:47,718 - rag_agent.agent.RAGAgent - INFO - Created 374 chunks from web content
+2025-01-22 21:26:47,718 - rag_agent.agent.RAGAgent - INFO - Creating FAISS index with 374 text chunks
+2025-01-22 21:28:47,831 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-01-22 21:28:47,857 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-01-22 21:28:47,878 - rag_agent.agent.RAGAgent - INFO - Saving FAISS index to faiss_cache\docs_flytbase_com_index
+2025-01-22 21:28:47,883 - __main__.ChatInterface - INFO - RAG agent initialized successfully
+2025-01-22 21:28:47,883 - __main__.ChatInterface - INFO - Starting chat interface
+2025-01-22 21:28:47,884 - __main__.ChatInterface - INFO - Welcome message displayed
+2025-01-22 21:28:59,243 - __main__.ChatInterface - INFO - Processing user input: what is flytbase
+2025-01-22 21:28:59,243 - rag_agent.agent.RAGAgent - INFO - Processing user query: what is flytbase
+2025-01-22 21:28:59,243 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: what is flytbase
+2025-01-22 21:28:59,358 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:28:59,358 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:29:00,960 - rag_agent.agent.RAGAgent - ERROR - Error generating response: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull llama3.2-vision:latest`.
+2025-01-22 21:29:00,961 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-01-22 21:29:57,916 - __main__.ChatInterface - INFO - Processing user input: hello tell me about flytbase
+2025-01-22 21:29:57,916 - rag_agent.agent.RAGAgent - INFO - Processing user query: hello tell me about flytbase
+2025-01-22 21:29:57,916 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: hello tell me about flytbase
+2025-01-22 21:29:57,965 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:29:57,966 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:29:59,353 - rag_agent.agent.RAGAgent - ERROR - Error generating response: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull llama3.2-vision:latest`.
+2025-01-22 21:29:59,354 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-01-22 21:31:20,720 - __main__.ChatInterface - INFO - User interrupted the program

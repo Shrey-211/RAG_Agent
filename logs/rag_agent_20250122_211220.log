@@ -1,0 +1,31 @@
+2025-01-22 21:12:20,730 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250122_211220.log
+2025-01-22 21:12:21,974 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250122_211221.log
+2025-01-22 21:12:21,975 - logging_config - INFO - Starting application
+2025-01-22 21:12:21,978 - logging_config - INFO - Command line arguments: Namespace(url='https://docs.flytbase.com/', dir=None)
+2025-01-22 21:12:21,978 - __main__.ChatInterface - INFO - Initializing chat interface
+2025-01-22 21:12:21,978 - __main__.ChatInterface - INFO - Using web knowledge base: https://docs.flytbase.com/
+2025-01-22 21:12:21,979 - rag_agent.agent.WebKnowledgeBase - INFO - Initialized WebKnowledgeBase with base URL: https://docs.flytbase.com
+2025-01-22 21:12:21,980 - rag_agent.agent.RAGAgent - INFO - Initializing RAG Agent
+2025-01-22 21:12:30,831 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-01-22 21:12:30,831 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-01-22 21:13:16,025 - rag_agent.agent.RAGAgent - INFO - Using web-based knowledge source
+2025-01-22 21:13:16,025 - rag_agent.agent.RAGAgent - INFO - Setting up vector store
+2025-01-22 21:13:16,025 - rag_agent.agent.RAGAgent - INFO - Fetching content from web knowledge base
+2025-01-22 21:13:16,025 - rag_agent.agent.WebKnowledgeBase - INFO - Getting all content from knowledge base
+2025-01-22 21:13:16,025 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching content from: https://docs.flytbase.com/
+2025-01-22 21:13:17,808 - rag_agent.agent.WebKnowledgeBase - INFO - Successfully fetched 291794 characters from https://docs.flytbase.com/
+2025-01-22 21:13:17,808 - rag_agent.agent.WebKnowledgeBase - INFO - Retrieved 291794 characters of content
+2025-01-22 21:13:17,844 - rag_agent.agent.RAGAgent - INFO - Created 374 chunks from web content
+2025-01-22 21:13:17,844 - rag_agent.agent.RAGAgent - INFO - Creating FAISS index with 374 text chunks
+2025-01-22 21:15:21,527 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-01-22 21:15:21,721 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-01-22 21:15:21,761 - rag_agent.agent.RAGAgent - INFO - Saving FAISS index
+2025-01-22 21:15:21,763 - __main__.ChatInterface - INFO - RAG agent initialized successfully
+2025-01-22 21:15:21,765 - __main__.ChatInterface - INFO - Starting chat interface
+2025-01-22 21:15:21,765 - __main__.ChatInterface - INFO - Welcome message displayed
+2025-01-22 21:19:50,963 - __main__.ChatInterface - INFO - Processing user input: what is flytbase
+2025-01-22 21:19:50,963 - rag_agent.agent.RAGAgent - INFO - Processing user query: what is flytbase
+2025-01-22 21:19:50,963 - rag_agent.agent.TaskParser - INFO - Parsing query into tasks: what is flytbase
+2025-01-22 21:20:20,500 - rag_agent.agent.TaskParser - ERROR - Error parsing tasks: Expecting value: line 1 column 1 (char 0)
+2025-01-22 21:20:20,500 - rag_agent.agent.RAGAgent - WARNING - No tasks parsed from query
+2025-01-22 21:24:49,388 - __main__.ChatInterface - INFO - User interrupted the program

@@ -1,0 +1,53 @@
+2025-01-22 21:33:52,528 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250122_213352.log
+2025-01-22 21:33:53,816 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250122_213353.log
+2025-01-22 21:33:53,819 - logging_config - INFO - Starting application
+2025-01-22 21:33:53,821 - logging_config - INFO - Command line arguments: Namespace(url='https://docs.flytbase.com/', dir=None)
+2025-01-22 21:33:53,821 - __main__.ChatInterface - INFO - Initializing chat interface
+2025-01-22 21:33:53,821 - __main__.ChatInterface - INFO - Using web knowledge base: https://docs.flytbase.com/
+2025-01-22 21:33:53,821 - rag_agent.agent.WebKnowledgeBase - INFO - Initialized WebKnowledgeBase with base URL: https://docs.flytbase.com
+2025-01-22 21:33:53,821 - rag_agent.agent.WebKnowledgeBase - INFO - Loading cached content from knowledge_cache\docs_flytbase_com_cache.pkl
+2025-01-22 21:33:53,821 - rag_agent.agent.RAGAgent - INFO - Initializing RAG Agent
+2025-01-22 21:33:58,103 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-01-22 21:33:58,103 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-01-22 21:34:01,515 - rag_agent.agent.RAGAgent - INFO - Using web-based knowledge source
+2025-01-22 21:34:01,516 - rag_agent.agent.RAGAgent - INFO - Setting up vector store
+2025-01-22 21:34:01,516 - rag_agent.agent.RAGAgent - INFO - No cached index found, will build new one
+2025-01-22 21:34:01,516 - rag_agent.agent.RAGAgent - INFO - Fetching content from web knowledge base
+2025-01-22 21:34:01,516 - rag_agent.agent.WebKnowledgeBase - INFO - Getting all content from knowledge base
+2025-01-22 21:34:01,516 - rag_agent.agent.WebKnowledgeBase - INFO - Using cached content for https://docs.flytbase.com/
+2025-01-22 21:34:01,516 - rag_agent.agent.WebKnowledgeBase - INFO - Retrieved 291794 characters of content
+2025-01-22 21:34:01,543 - rag_agent.agent.RAGAgent - INFO - Created 374 chunks from web content
+2025-01-22 21:34:01,544 - rag_agent.agent.RAGAgent - INFO - Creating FAISS index with 374 text chunks
+2025-01-22 21:36:00,760 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-01-22 21:36:00,783 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-01-22 21:36:00,808 - rag_agent.agent.RAGAgent - INFO - Saving FAISS index to faiss_cache\docs_flytbase_com_index
+2025-01-22 21:36:00,812 - __main__.ChatInterface - INFO - RAG agent initialized successfully
+2025-01-22 21:36:00,812 - __main__.ChatInterface - INFO - Starting chat interface
+2025-01-22 21:36:00,812 - __main__.ChatInterface - INFO - Welcome message displayed
+2025-01-22 21:37:08,088 - __main__.ChatInterface - INFO - Processing user input: what is flytbase?
+2025-01-22 21:37:08,088 - rag_agent.agent.RAGAgent - INFO - Processing user query: what is flytbase?
+2025-01-22 21:37:08,088 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: what is flytbase?
+2025-01-22 21:37:08,180 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:37:08,180 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:37:41,320 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-01-22 21:37:41,321 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-01-22 21:38:11,273 - __main__.ChatInterface - INFO - Processing user input: can you explain me about mission planning
+2025-01-22 21:38:11,274 - rag_agent.agent.RAGAgent - INFO - Processing user query: can you explain me about mission planning
+2025-01-22 21:38:11,274 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: can you explain me about mission planning
+2025-01-22 21:38:11,324 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:38:11,325 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:39:10,731 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-01-22 21:39:10,731 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-01-22 21:39:32,244 - __main__.ChatInterface - INFO - Processing user input: explain me more pn grid mission
+2025-01-22 21:39:32,244 - rag_agent.agent.RAGAgent - INFO - Processing user query: explain me more pn grid mission
+2025-01-22 21:39:32,245 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: explain me more pn grid mission
+2025-01-22 21:39:32,290 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:39:32,290 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:40:28,244 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-01-22 21:40:28,244 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-01-22 21:44:18,907 - __main__.ChatInterface - INFO - Processing user input: bye
+2025-01-22 21:44:18,908 - rag_agent.agent.RAGAgent - INFO - Processing user query: bye
+2025-01-22 21:44:18,908 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: bye
+2025-01-22 21:44:18,951 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-01-22 21:44:18,951 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-01-22 21:44:45,851 - __main__.ChatInterface - INFO - User interrupted the program
