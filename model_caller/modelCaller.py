@@ -10,7 +10,7 @@ class OllamaClient:
         self.model = model
         self.chat_endpoint = f"{OLLAMA_BASE}/chat"
 
-    def generate(self, prompt, system="", context=None, temperature=0.2, top_p=0.9):
+    def generate(self, prompt, system="", context=None, temperature=0.4, top_p=0.3):
         """
         Generate a response using Ollama Chat API with streaming support
         

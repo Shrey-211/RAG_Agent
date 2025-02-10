@@ -1,0 +1,30 @@
+# Existing entries
+__pycache__
+faiss_cache/
+knowledge_cache/
+logs/
+
+# Python
+*.py[cod]
+*.egg-info
+.pytest_cache
+
+# Virtual Environments
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.local
+
+# Build/output
+dist/
+build/
+
+# Coverage reports
+.coverage
+htmlcov/
