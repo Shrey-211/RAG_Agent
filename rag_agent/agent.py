@@ -15,6 +15,14 @@ import pickle
 from datetime import datetime
 from bs4 import BeautifulSoup
 import re
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
 
 # Initialize logging
 logger = setup_logging()
@@ -57,9 +65,10 @@ class TaskParser:
 class WebKnowledgeBase:
     def __init__(self, base_url: str):
         self.base_url = base_url.rstrip('/')
-        self.session = requests.Session()
         self.logger = logging.getLogger(__name__ + ".WebKnowledgeBase")
         self.logger.info(f"Initialized WebKnowledgeBase with base URL: {self.base_url}")
+        
+        # Setup cache
         self.cache_dir = "knowledge_cache"
         os.makedirs(self.cache_dir, exist_ok=True)
         self.cache_file = os.path.join(self.cache_dir, f"{self._get_domain_name()}_cache.pkl")
@@ -67,6 +76,117 @@ class WebKnowledgeBase:
         self.visited_urls = set()  # Track visited URLs to avoid cycles
         self.max_depth = 10  # Increased depth for better coverage
         
+        # Setup Selenium
+        self.logger.info("Setting up Chrome WebDriver")
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")  # Run in headless mode
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--window-size=1920,1080")
+        
+        try:
+            self.driver = webdriver.Chrome(
+                service=Service(ChromeDriverManager().install()),
+                options=chrome_options
+            )
+            self.logger.info("Chrome WebDriver initialized successfully")
+        except Exception as e:
+            self.logger.error(f"Failed to initialize Chrome WebDriver: {str(e)}")
+            raise
+            
+    def __del__(self):
+        """Clean up WebDriver when object is destroyed"""
+        if hasattr(self, 'driver'):
+            try:
+                self.driver.quit()
+            except:
+                pass
+
+    def fetch_content(self, path: str = "", current_depth: int = 0) -> Dict[str, Any]:
+        """Fetch content from cache or website with related content"""
+        # Special handling for PriceLabs help portal
+        if '/portal/' in self.base_url and not path:
+            url = self.base_url
+        else:
+            url = f"{self.base_url}/{path.lstrip('/')}" if path else self.base_url
+        
+        self.logger.debug(f"Attempting to fetch content from URL: {url}")
+        
+        # Check if we've hit the depth limit
+        if current_depth > self.max_depth:
+            self.logger.debug(f"Hit depth limit ({self.max_depth}) for URL: {url}")
+            return {'content': '', 'related_content': {}}
+        
+        # Check if we've already visited this URL
+        if url in self.visited_urls:
+            self.logger.debug(f"Already visited URL: {url}")
+            return {'content': self.content_cache.get(url, {}).get('content', ''),
+                   'related_content': self.content_cache.get(url, {}).get('related_content', {})}
+        
+        # Mark URL as visited
+        self.visited_urls.add(url)
+        
+        # Check cache first
+        if url in self.content_cache:
+            cache_entry = self.content_cache[url]
+            age_hours = (datetime.now() - cache_entry['timestamp']).total_seconds() / 3600
+            if age_hours < 24:  # Cache valid for 24 hours
+                self.logger.debug(f"Using cached content for {url}")
+                return cache_entry
+        
+        self.logger.info(f"Fetching fresh content from: {url}")
+        try:
+            # Load the page with Selenium
+            self.driver.get(url)
+            
+            # Wait for main content to load
+            try:
+                WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.CLASS_NAME, "kb-article-content"))
+                )
+            except TimeoutException:
+                self.logger.debug("Timed out waiting for kb-article-content, trying kb-category-content")
+                try:
+                    WebDriverWait(self.driver, 5).until(
+                        EC.presence_of_element_located((By.CLASS_NAME, "kb-category-content"))
+                    )
+                except TimeoutException:
+                    self.logger.debug("Timed out waiting for kb-category-content, using body content")
+            
+            # Get the page source after JavaScript has rendered
+            html_content = self.driver.page_source
+            content, internal_links = self._clean_html_content(html_content, url)
+            
+            self.logger.debug(f"Extracted content length: {len(content)}")
+            self.logger.debug(f"Found {len(internal_links)} internal links")
+            
+            # Fetch related content from internal links
+            related_content = {}
+            for link in internal_links:
+                if self._should_follow_link(link):
+                    self.logger.debug(f"Following internal link: {link}")
+                    link_path = urlparse(link).path
+                    related_data = self.fetch_content(link_path, current_depth + 1)
+                    if related_data['content']:
+                        related_content[link] = related_data['content']
+            
+            # Cache the content and related content
+            cache_entry = {
+                'content': content,
+                'related_content': related_content,
+                'timestamp': datetime.now()
+            }
+            self.content_cache[url] = cache_entry
+            self._save_cache()
+            
+            return cache_entry
+            
+        except Exception as e:
+            self.logger.error(f"Error fetching content from {url}: {str(e)}")
+            self.logger.debug("Full error details:", exc_info=True)
+            return {'content': '', 'related_content': {}}
+
     def _get_domain_name(self) -> str:
         """Extract domain name from URL"""
         return urlparse(self.base_url).netloc.replace(".", "_")
@@ -106,8 +226,17 @@ class WebKnowledgeBase:
         base_url_parts = urlparse(self.base_url)
         
         # Remove script and style elements
-        for script in soup(["script", "style"]):
-            script.decompose()
+        for element in soup(['script', 'style', 'nav', 'footer', 'header']):
+            element.decompose()
+            
+        # For PriceLabs help portal, focus on main content area
+        if '/portal/' in url:
+            main_content = soup.find('div', class_='kb-article-content') or \
+                         soup.find('div', class_='kb-category-content') or \
+                         soup.find('div', role='main')
+            if main_content:
+                self.logger.debug("Found main content area in help portal page")
+                soup = BeautifulSoup(str(main_content), 'html.parser')
             
         # Extract internal links before getting text
         internal_links = []
@@ -125,7 +254,8 @@ class WebKnowledgeBase:
                 
             # Only include links from the same domain
             if urlparse(href).netloc == base_url_parts.netloc:
-                internal_links.append(href)
+                if '/portal/' in href and '/kb/' in href:  # Only include knowledge base articles
+                    internal_links.append(href)
         
         # Extract text and clean it
         text = soup.get_text(separator='\n', strip=True)
@@ -134,8 +264,11 @@ class WebKnowledgeBase:
         lines = [line.strip() for line in text.splitlines() if line.strip()]
         text = '\n'.join(lines)
         
+        self.logger.debug(f"Cleaned text length: {len(text)}")
+        self.logger.debug(f"Found {len(internal_links)} internal KB links")
+        
         return text, list(set(internal_links))  # Remove duplicate links
-    
+
     def _should_follow_link(self, url: str) -> bool:
         """Determine if a link should be followed"""
         if url in self.visited_urls:
@@ -150,7 +283,7 @@ class WebKnowledgeBase:
             
         # Skip common non-content paths
         skip_patterns = [
-            '/static/', '/assets/', '/images/', '/css/', '/js/',
+            '/static/', '/assets/', '/images/', '/css/', '/js/', '/publicImages/', '//static',
             '.png', '.jpg', '.jpeg', '.gif', '.css', '.js', '.ico'
         ]
         
@@ -179,61 +312,6 @@ class WebKnowledgeBase:
                         urls.append(match)
         
         return list(set(urls))  # Remove duplicates
-
-    def fetch_content(self, path: str = "", current_depth: int = 0) -> Dict[str, Any]:
-        """Fetch content from cache or website with related content"""
-        url = f"{self.base_url}/{path.lstrip('/')}" if path else self.base_url
-        
-        # Check if we've hit the depth limit
-        if current_depth > self.max_depth:
-            return {'content': '', 'related_content': {}}
-        
-        # Check if we've already visited this URL
-        if url in self.visited_urls:
-            return {'content': self.content_cache.get(url, {}).get('content', ''),
-                   'related_content': self.content_cache.get(url, {}).get('related_content', {})}
-        
-        # Mark URL as visited
-        self.visited_urls.add(url)
-        
-        # Check cache first
-        if url in self.content_cache:
-            cache_entry = self.content_cache[url]
-            age_hours = (datetime.now() - cache_entry['timestamp']).total_seconds() / 3600
-            if age_hours < 24:  # Cache valid for 24 hours
-                self.logger.info(f"Using cached content for {url}")
-                return cache_entry
-        
-        self.logger.info(f"Fetching fresh content from: {url}")
-        try:
-            response = requests.get(url, timeout=10)  # Added timeout
-            response.raise_for_status()
-            content, internal_links = self._clean_html_content(response.text, url)
-            
-            # Fetch related content from internal links
-            related_content = {}
-            for link in internal_links:
-                if self._should_follow_link(link):
-                    self.logger.info(f"Following internal link: {link}")
-                    link_path = urlparse(link).path
-                    related_data = self.fetch_content(link_path, current_depth + 1)
-                    if related_data['content']:
-                        related_content[link] = related_data['content']
-            
-            # Cache the content and related content
-            cache_entry = {
-                'content': content,
-                'related_content': related_content,
-                'timestamp': datetime.now()
-            }
-            self.content_cache[url] = cache_entry
-            self._save_cache()
-            
-            return cache_entry
-            
-        except Exception as e:
-            self.logger.error(f"Error fetching content from {url}: {str(e)}")
-            return {'content': '', 'related_content': {}}
 
     def fetch_page_content(self, page_url: str) -> str:
         """Fetch content from a specific documentation page with related content"""
@@ -347,13 +425,16 @@ class RAGAgent:
             if self.knowledge_source:
                 self.logger.info("Fetching content from web knowledge base")
                 documents = self.knowledge_source.get_all_content()
+                total_chunks = 0
                 for doc in documents:
                     chunks = text_splitter.split_text(doc['content'])
+                    total_chunks += len(chunks)
                     texts.extend(chunks)
                     metadata.extend([{'source': doc['source']} for _ in chunks])
-                self.logger.info(f"Created {len(chunks)} chunks from web content")
+                self.logger.info(f"Created {total_chunks} chunks from web content")
             else:
                 self.logger.info(f"Reading documents from {self.knowledge_dir}")
+                total_chunks = 0
                 for root, _, files in os.walk(self.knowledge_dir):
                     for file in files:
                         if file.endswith('.txt') or file.endswith('.md'):
@@ -362,9 +443,11 @@ class RAGAgent:
                             with open(filepath, 'r', encoding='utf-8') as f:
                                 content = f.read()
                                 chunks = text_splitter.split_text(content)
+                                total_chunks += len(chunks)
                                 texts.extend(chunks)
                                 metadata.extend([{'source': filepath} for _ in chunks])
                             self.logger.info(f"Created {len(chunks)} chunks from {filepath}")
+                self.logger.info(f"Created {total_chunks} total chunks from local files")
             
             if texts:
                 self.logger.info(f"Creating FAISS index with {len(texts)} text chunks")
@@ -452,7 +535,7 @@ class RAGAgent:
                 context = f"Additional information from internet search:\n{internet_context}"
         
         try:
-            system_prompt = """You are a helpful AI assistant with expertise in FlytBase and drone technologies. 
+            system_prompt = """You are a helpful AI assistant with expertise in PriceLabs and rental industry. 
             When responding:
             1. If using information from the context, cite it
             2. If using general knowledge, mention that
