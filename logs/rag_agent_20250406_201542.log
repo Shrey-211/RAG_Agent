@@ -1,0 +1,1839 @@
+2025-04-06 20:15:42,660 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250406_201542.log
+2025-04-06 20:15:45,061 - logging_config - INFO - Logging initialized. Log file: logs\rag_agent_20250406_201545.log
+2025-04-06 20:15:45,071 - logging_config - INFO - Starting application
+2025-04-06 20:15:45,074 - logging_config - INFO - Command line arguments: Namespace(url='https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs', dir=None)
+2025-04-06 20:15:45,077 - __main__.ChatInterface - INFO - Initializing chat interface
+2025-04-06 20:15:45,078 - __main__.ChatInterface - INFO - Using web knowledge base: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs
+2025-04-06 20:15:45,079 - rag_agent.agent.WebKnowledgeBase - INFO - Initialized WebKnowledgeBase with base URL: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs
+2025-04-06 20:15:45,080 - rag_agent.agent.WebKnowledgeBase - INFO - Setting up Chrome WebDriver
+2025-04-06 20:15:45,101 - WDM - INFO - ====== WebDriver manager ======
+2025-04-06 20:15:46,549 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 20:15:46,850 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 20:15:47,062 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 20:15:47,848 - WDM - INFO - WebDriver version 134.0.6998.165 selected
+2025-04-06 20:15:47,856 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.165/win32/chromedriver-win32.zip
+2025-04-06 20:15:47,856 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.165/win32/chromedriver-win32.zip
+2025-04-06 20:15:48,020 - WDM - INFO - Driver downloading response is 200
+2025-04-06 20:15:49,077 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-06 20:15:49,746 - WDM - INFO - Driver has been saved in cache [C:\Users\Shrey\.wdm\drivers\chromedriver\win64\134.0.6998.165]
+2025-04-06 20:15:52,130 - rag_agent.agent.WebKnowledgeBase - INFO - Chrome WebDriver initialized successfully
+2025-04-06 20:15:52,131 - rag_agent.agent.RAGAgent - INFO - Initializing RAG Agent
+2025-04-06 20:15:59,159 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-06 20:15:59,160 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-04-06 20:16:03,531 - rag_agent.agent.RAGAgent - INFO - Using web-based knowledge source
+2025-04-06 20:16:03,534 - rag_agent.agent.RAGAgent - INFO - Setting up vector store
+2025-04-06 20:16:03,534 - rag_agent.agent.RAGAgent - INFO - No cached index found, will build new one
+2025-04-06 20:16:03,535 - rag_agent.agent.RAGAgent - INFO - Fetching content from web knowledge base
+2025-04-06 20:16:03,535 - rag_agent.agent.WebKnowledgeBase - INFO - Getting all content from knowledge base
+2025-04-06 20:16:03,535 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs
+2025-04-06 20:16:22,877 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs
+2025-04-06 20:16:41,140 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/myarea
+2025-04-06 20:16:57,605 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/community
+2025-04-06 20:17:13,869 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb
+2025-04-06 20:17:32,151 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/home
+2025-04-06 20:17:50,218 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/newticket
+2025-04-06 20:18:08,007 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:18:08,008 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:18:08,009 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:18:08,011 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:18:08,012 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:18:08,014 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:18:08,015 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/what-is-market-dashboard-and-why-to-use-it
+2025-04-06 20:18:27,219 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-how-to-create-and-apply-custom-compsets
+2025-04-06 20:18:44,729 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/dashboard-di-mercato-come-creare-e-visualizzare-comp-set-personalizzati
+2025-04-06 20:19:42,117 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboards-comment-cr%C3%A9er-et-afficher-des-ensembles-de-concurrents-personnalis%C3%A9s
+2025-04-06 20:20:04,805 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/home
+2025-04-06 20:22:04,812 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/home: HTTPConnectionPool(host='localhost', port=53101): Read timed out. (read timeout=120)
+2025-04-06 20:22:04,815 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/account
+2025-04-06 20:23:56,100 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:23:56,101 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/myarea
+2025-04-06 20:24:13,920 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:24:13,920 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/newticket
+2025-04-06 20:24:33,294 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:24:33,295 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/what-is-market-dashboard-and-how-to-use-it
+2025-04-06 20:24:51,340 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-methodology-terminology
+2025-04-06 20:25:34,393 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/market-dashboards/mr-faqs
+2025-04-06 20:25:51,587 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:25:51,588 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/key-performance-indicators
+2025-04-06 20:26:09,850 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/policies-fees
+2025-04-06 20:26:28,485 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/los-booking-window
+2025-04-06 20:26:45,837 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard
+2025-04-06 20:27:03,091 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:27:03,091 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs
+2025-04-06 20:27:41,011 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:27:41,011 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/market-dashboards
+2025-04-06 20:27:58,915 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:27:58,916 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/pricing-and-billing
+2025-04-06 20:28:15,783 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:28:15,783 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/amenities
+2025-04-06 20:28:37,627 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:28:37,628 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/account
+2025-04-06 20:28:56,135 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:28:56,135 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboards-tendencias-de-duraci%C3%B3n-de-estad%C3%ADa-y-ventana-de-reservas
+2025-04-06 20:29:12,836 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:29:12,836 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/los-booking-window
+2025-04-06 20:29:34,412 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:29:34,412 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing
+2025-04-06 20:30:02,253 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:30:02,254 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/listing-map-compsets
+2025-04-06 20:30:19,820 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:30:19,821 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/portfolio-analytics
+2025-04-06 20:30:38,526 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:30:38,526 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/market-dashboards/market-dashboard
+2025-04-06 20:30:58,586 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:30:58,586 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboards-tend%C3%AAncias-na-dura%C3%A7%C3%A3o-da-estadia-e-na-janela-de-reserva
+2025-04-06 20:31:16,881 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:31:16,882 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/market-dashboards/revenue-estimator-pro
+2025-04-06 20:31:43,848 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:31:43,848 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/price-occupancy-trends
+2025-04-06 20:32:03,434 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:32:03,434 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/dashboard-di-mercato-tendenze-della-durata-del-soggiorno-e-della-finestra-di-prenotazione
+2025-04-06 20:32:21,828 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:32:21,829 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:32:21,830 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/policies-fees
+2025-04-06 20:32:40,074 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/politiques-et-frais
+2025-04-06 20:32:57,724 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:32:57,725 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboards-pol%C3%ADticas-e-taxas
+2025-04-06 20:33:18,729 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:33:18,730 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/dashboard-di-mercato-politiche-e-spese
+2025-04-06 20:33:35,600 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:33:35,600 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboard-pol%C3%ADticas-y-tarifas-adicionales
+2025-04-06 20:33:54,739 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:33:54,740 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:33:54,742 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:33:54,743 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/key-performance-indicators
+2025-04-06 20:34:12,318 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/market-da
+2025-04-06 20:34:30,390 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/market-dashboards/revenue-estimator-pro
+2025-04-06 20:34:47,450 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:34:47,451 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/new-users
+2025-04-06 20:35:03,536 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:35:03,536 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/market-dashboards
+2025-04-06 20:35:19,781 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:35:19,782 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/portfolio-analytics
+2025-04-06 20:35:37,181 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:35:37,182 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/dashboard-di-mercato-mappa-degli-alloggi-e-compset
+2025-04-06 20:35:54,548 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:35:54,549 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/comprendere-le
+2025-04-06 20:36:12,317 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:36:12,317 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/myarea
+2025-04-06 20:36:29,710 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:36:29,710 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs
+2025-04-06 20:36:46,970 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:36:46,970 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/market-dashboards/market-dashboard
+2025-04-06 20:37:05,522 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:37:05,523 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboards-key-performance-indicators-1-10-2024
+2025-04-06 20:37:24,198 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:37:24,199 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/pricing-and-billing
+2025-04-06 20:37:40,445 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:37:40,446 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/dashboard-di-mercato-tendenze-di-prezzo-e-occupazione
+2025-04-06 20:37:57,273 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:37:57,274 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/market-dashboards/mr-faqs
+2025-04-06 20:38:13,910 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:38:13,911 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/newticket
+2025-04-06 20:38:30,304 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:38:30,305 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboards-indicateurs-cl%C3%A9s-de-performance
+2025-04-06 20:38:47,475 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:38:47,476 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/home
+2025-04-06 20:39:16,814 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:39:16,815 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboards-indicadores-clave-de-rendimiento
+2025-04-06 20:39:36,474 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:39:36,474 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/community
+2025-04-06 20:39:52,427 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:39:52,427 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/dynamic-pricing
+2025-04-06 20:40:08,398 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:40:08,399 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb
+2025-04-06 20:40:24,370 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:40:24,371 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/account
+2025-04-06 20:40:40,365 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:40:40,367 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:40:40,368 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:40:40,369 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:40:40,369 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/new-ai-features-in-market-dashboards
+2025-04-06 20:40:56,845 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/les-fonctionnalit%C3%A9s-ia-dans-les-market-dashboards
+2025-04-06 20:41:15,158 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboards-9-10-2024
+2025-04-06 20:41:33,047 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/market-dashboards/mr-faqs
+2025-04-06 20:41:50,636 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:41:50,637 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/dashboard-di-mercato-servizi
+2025-04-06 20:42:09,449 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:42:09,450 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/market-dashboards
+2025-04-06 20:42:25,682 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:42:25,682 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/portfolio-analytics
+2025-04-06 20:42:43,874 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:42:43,875 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboards-comodidades
+2025-04-06 20:43:01,252 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:43:01,253 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/community
+2025-04-06 20:43:20,096 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:43:20,097 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/new-users
+2025-04-06 20:43:36,856 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:43:36,856 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb
+2025-04-06 20:43:53,625 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:43:53,626 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboards-listing-map-and-comp-sets-18-10-2024
+2025-04-06 20:44:11,008 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:44:11,010 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/amenities
+2025-04-06 20:44:29,962 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:44:29,963 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/market-dashboards/revenue-estimator-pro
+2025-04-06 20:44:47,783 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:44:47,784 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboards-9-10-2024
+2025-04-06 20:45:04,674 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:45:04,674 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs
+2025-04-06 20:45:20,797 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:45:20,798 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing
+2025-04-06 20:45:36,952 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:45:36,953 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/pricelabs-training-on-how-to-use
+2025-04-06 20:45:53,432 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:45:53,433 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/market-dashboards/market-dashboard
+2025-04-06 20:46:11,253 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:46:11,254 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboards-amenidades
+2025-04-06 20:46:28,725 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:46:28,726 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboards-tendances-desrix-et-d-occupation
+2025-04-06 20:48:19,186 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:48:19,186 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/pricing-and-billing
+2025-04-06 20:48:35,987 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:48:35,989 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:48:35,989 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/zoom-su
+2025-04-06 20:48:54,366 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/market-dashboard-in-azione-real-life-applications-and-case-studies
+2025-04-06 20:49:19,710 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:49:19,710 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboard-in-action-real-life-applications-and-case-studies-15-12-2024
+2025-04-06 20:49:38,048 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:49:38,049 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/articles/market-dashboard-in-aktion-praktische-anwendungen-und-fallstudien
+2025-04-06 20:50:01,529 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:50:01,530 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/zoom-su
+2025-04-06 20:50:20,003 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:50:20,003 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-in-action-real-life-applications-and-case-studies
+2025-04-06 20:51:26,585 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:51:26,586 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboard-en-acci%C3%B3n-usos-en-la-vida-real-y-casos-de-uso
+2025-04-06 20:51:57,595 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:51:57,595 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/m%C3%A9thodologie-du-tableau-de-bord-du-march%C3%A9-sources-et-traitement-des-donn%C3%A9es
+2025-04-06 20:52:17,880 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:52:17,883 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:52:17,883 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/funciones-de-ia-en-los-market-dashboards
+2025-04-06 20:52:36,523 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/introducci%C3%B3n-a-los-market-dashboards
+2025-04-06 20:52:53,701 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:52:53,702 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/portfolio-analytics
+2025-04-06 20:53:09,920 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:53:09,921 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/market-dashboards
+2025-04-06 20:53:25,978 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:53:25,978 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/community
+2025-04-06 20:53:42,065 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:53:42,065 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing
+2025-04-06 20:53:58,140 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:53:58,140 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/c%C3%B3mo-definir-y-calcular-descuentos-mensuales
+2025-04-06 20:54:14,540 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:54:14,540 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb
+2025-04-06 20:54:33,228 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:54:33,229 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/newticket
+2025-04-06 20:54:51,817 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:54:51,817 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/market-dashboards/mr-faqs
+2025-04-06 20:55:10,481 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:55:10,482 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/account
+2025-04-06 20:55:27,271 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:55:27,272 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/market-dashboards/revenue-estimator-pro
+2025-04-06 20:55:45,338 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:55:45,338 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/pricing-and-billing
+2025-04-06 20:56:02,030 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:56:02,031 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboards-mapa-de-listados-y-sets-competitivos
+2025-04-06 20:56:22,337 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:56:22,337 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/home
+2025-04-06 20:56:41,524 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:56:41,524 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/myarea
+2025-04-06 20:56:59,200 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:56:59,201 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs
+2025-04-06 20:57:15,554 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:57:15,555 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/an%C3%A1lisis-de-ia-en-datos-de-vecindario-comprender-los-gr%C3%A1ficos-de-precios-y-ocupaci%C3%B3n
+2025-04-06 20:57:34,862 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:57:34,863 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/uso-de-pricelabs-para-alquileres-a-medio-plazo
+2025-04-06 20:57:51,850 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:57:51,851 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/new-ai-features-in-market-dashboards
+2025-04-06 20:58:08,675 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:58:08,676 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/new-users
+2025-04-06 20:58:25,711 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:58:25,712 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/market-dashboards/market-dashboard
+2025-04-06 20:58:45,153 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:58:45,154 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/funzionalit%C3%A0
+2025-04-06 20:59:08,718 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:59:08,719 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/ai-features-in-market-dashboards
+2025-04-06 20:59:28,249 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:59:28,252 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:59:28,256 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 20:59:28,257 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/ai-insights-neighborhood-data
+2025-04-06 20:59:45,802 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/ai-insights-dans-les-donn%C3%A9es-sur-les-quartiers-comprendre-les-graphiques-de-prix-et-d-occupation
+2025-04-06 21:00:04,798 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/portfolio-analytics-spot-actionable-trends-in-your-bookings
+2025-04-06 21:00:29,588 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:00:29,589 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/manage-listings
+2025-04-06 21:01:18,258 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:01:18,259 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/customizations
+2025-04-06 21:01:34,541 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:01:34,542 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/dp-faqs
+2025-04-06 21:01:52,727 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:01:52,728 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/algorithm
+2025-04-06 21:02:08,952 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:02:08,953 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/pricing-strategies
+2025-04-06 21:02:25,191 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:02:25,192 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/price-calculations
+2025-04-06 21:02:41,138 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:02:41,139 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/2023-05-mai-pricelabs-gagne-shortyz-nudges-orphan-day-gap-filler-upgraded-filters
+2025-04-06 21:02:57,626 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:02:57,627 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/multicalendar
+2025-04-06 21:03:14,019 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:03:14,019 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/listing-neighborhood-data
+2025-04-06 21:03:30,969 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:03:30,969 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/sensibilit%C3%A9-du-facteur-de-demande
+2025-04-06 21:03:50,575 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:03:50,575 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/pricing-dashboard
+2025-04-06 21:04:06,634 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:04:06,635 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/2023-03-mars-nouvel-onglet-rapports-de-pacing-ensembles-de-concurrents-meilleures-performances-en-mati%C3%A8re-de-recettes
+2025-04-06 21:04:25,473 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:04:25,473 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/pms-integration
+2025-04-06 21:04:41,730 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:04:41,730 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/basic-setup
+2025-04-06 21:04:57,997 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:04:57,997 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/dynamic-pricing/pricelabs-for-hotels
+2025-04-06 21:05:14,188 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:05:14,189 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:05:14,190 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/pricing-dashboard
+2025-04-06 21:05:31,711 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:05:31,711 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/manage-listings
+2025-04-06 21:05:50,145 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:05:50,145 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/pricelabs-for-hotels
+2025-04-06 21:06:06,707 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:06:06,708 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/price-calculations
+2025-04-06 21:06:24,079 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:06:24,080 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/pricing-strategies
+2025-04-06 21:06:41,155 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:06:41,155 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/dp-faqs
+2025-04-06 21:06:58,798 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:06:58,798 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/an%C3%A1lisis-de-ia-en-datos-de-vecindario-comprender-los-gr%C3%A1ficos-de-precios-y-ocupaci%C3%B3n
+2025-04-06 21:07:16,992 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/qu%C3%A9-es-el-panel-de-mercado-y-c%C3%B3mo-se-utiliza
+2025-04-06 21:07:38,690 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:07:38,691 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/pricing-strategies
+2025-04-06 21:07:57,319 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:07:57,319 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/pms-integration
+2025-04-06 21:08:15,300 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:08:15,300 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/qu%C3%A9-es-portfolio-analytics-y-c%C3%B3mo-se-usa
+2025-04-06 21:08:34,525 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:08:34,526 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/basic-setup
+2025-04-06 21:08:52,817 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:08:52,817 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/ai-insights-neighborhood-data
+2025-04-06 21:09:10,116 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:09:10,116 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/listing-market-data
+2025-04-06 21:09:26,292 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:09:26,292 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/qu%C3%A9-es-dynamic-pricing-y-c%C3%B3mo-utilizarlo
+2025-04-06 21:09:44,307 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:09:44,308 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/manage-listings
+2025-04-06 21:10:37,838 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:10:37,839 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/pricelabs-for-hotels
+2025-04-06 21:10:53,547 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:10:53,548 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/pricing-dashboard
+2025-04-06 21:11:09,569 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:11:09,569 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/price-calculations
+2025-04-06 21:11:29,908 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:11:29,908 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/usando-los-datos-de-vrbo-para-fijar-tus-precios-din%C3%A1micos
+2025-04-06 21:11:47,822 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:11:47,822 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/algorithm
+2025-04-06 21:12:04,526 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:12:04,527 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/ai-insights-no-recurso-dados-da-vizinhan%C3%A7a
+2025-04-06 21:12:22,644 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:12:22,645 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/customizations
+2025-04-06 21:12:39,414 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:12:39,414 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/dynamic-pricing/dp-faqs
+2025-04-06 21:12:58,974 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:12:58,974 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/ai-insights-sui-dati-del-vicinato
+2025-04-06 21:13:19,787 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:13:19,788 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:13:19,789 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/customizations
+2025-04-06 21:13:37,811 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:13:37,811 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/percentile-distribution
+2025-04-06 21:13:59,235 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/distribuci%C3%B3n-percentil
+2025-04-06 21:14:19,490 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:14:19,490 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/distribuzione-percentile
+2025-04-06 21:14:37,488 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:14:37,488 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/distribution-des-percentiles
+2025-04-06 21:14:53,729 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:14:53,729 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/percentis-de-distribui%C3%A7%C3%A3o
+2025-04-06 21:15:10,088 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:15:10,088 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/percentile-distribution
+2025-04-06 21:15:26,761 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:15:26,761 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/multicalendar
+2025-04-06 21:15:43,216 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:15:43,217 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/integration
+2025-04-06 21:15:59,520 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:15:59,520 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/basic-setup
+2025-04-06 21:16:15,448 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:16:15,448 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/dynamic-pricing/algorithm
+2025-04-06 21:16:31,394 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:16:31,394 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/setting-base-price
+2025-04-06 21:16:49,064 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:16:49,064 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-intel-dashboard
+2025-04-06 21:17:44,662 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:17:44,664 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:17:44,665 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:17:44,666 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-methodology-terminology
+2025-04-06 21:18:01,110 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/articles/market-dashboards-glossar
+2025-04-06 21:18:17,252 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/newticket
+2025-04-06 21:18:33,175 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:18:33,175 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/articles/performance-metrics-on-pricelabs-dashboard-and-multi-calendar
+2025-04-06 21:18:49,743 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:18:49,744 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/articles/erstellen-eines-market-dashboards
+2025-04-06 21:19:08,572 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:08,573 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/home
+2025-04-06 21:19:24,658 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:24,658 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/articles/understanding-the-market-dashboards-26-10-2024
+2025-04-06 21:19:41,363 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:41,363 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/new-users
+2025-04-06 21:19:48,011 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/new-users: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=134.0.6998.178)
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x009306E3]
+	(No symbol) [0x0092121B]
+	(No symbol) [0x00920F51]
+	(No symbol) [0x0091EE30]
+	(No symbol) [0x0091F9DD]
+	(No symbol) [0x0092BFE9]
+	(No symbol) [0x0093D975]
+	(No symbol) [0x00943236]
+	(No symbol) [0x0091FFED]
+	(No symbol) [0x0093D1F4]
+	(No symbol) [0x009BF119]
+	(No symbol) [0x0099D5B6]
+	(No symbol) [0x0096C54F]
+	(No symbol) [0x0096D894]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00A68208]
+	(No symbol) [0x00A683A9]
+	(No symbol) [0x00A5AAC0]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,012 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/pricing-and-billing
+2025-04-06 21:19:48,535 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/pricing-and-billing: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,535 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb
+2025-04-06 21:19:48,536 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,537 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/community
+2025-04-06 21:19:48,538 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/community: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,538 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/market-dashboards-glossary-of-terms-5-3-2024
+2025-04-06 21:19:48,539 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/articles/market-dashboards-glossary-of-terms-5-3-2024: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,539 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/portfolio-analytics
+2025-04-06 21:19:48,540 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/portfolio-analytics: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,541 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/account
+2025-04-06 21:19:48,542 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/account: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,543 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboards-glossary-of-terms
+2025-04-06 21:19:48,544 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboards-glossary-of-terms: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,544 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboards-gloss%C3%A1rio
+2025-04-06 21:19:48,545 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboards-gloss%C3%A1rio: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,546 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-methodology-terminology
+2025-04-06 21:19:48,546 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-methodology-terminology: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,547 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/articles/ben%C3%B6tige-ich-ein-objekt-um-ein-konto-zu-erstellen
+2025-04-06 21:19:48,548 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/articles/ben%C3%B6tige-ich-ein-objekt-um-ein-konto-zu-erstellen: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,548 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/market-dashboards
+2025-04-06 21:19:48,549 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/market-dashboards: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,549 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs
+2025-04-06 21:19:48,550 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,550 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboards-t%C3%A9rminos-del-glosario
+2025-04-06 21:19:48,551 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboards-t%C3%A9rminos-del-glosario: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,551 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/dynamic-pricing
+2025-04-06 21:19:48,552 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/dynamic-pricing: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,553 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/market-dashboards/market-dashboard
+2025-04-06 21:19:48,553 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/market-dashboards/market-dashboard: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,554 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/myarea
+2025-04-06 21:19:48,554 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/myarea: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,556 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,558 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,560 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,563 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,563 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-how-to-create-and-apply-custom-compsets
+2025-04-06 21:19:48,564 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-how-to-create-and-apply-custom-compsets: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,565 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/what-is-market-dashboard-and-how-to-use-it
+2025-04-06 21:19:48,566 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/what-is-market-dashboard-and-how-to-use-it: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,566 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/o-que-%C3%A9-o-painel-de-mercado-e-como-us%C3%A1-lo
+2025-04-06 21:19:48,567 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/o-que-%C3%A9-o-painel-de-mercado-e-como-us%C3%A1-lo: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,568 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/creating-a-market-dashboard
+2025-04-06 21:19:48,569 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/creating-a-market-dashboard: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,569 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-methodology-data-sources-and-processing
+2025-04-06 21:19:48,570 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-methodology-data-sources-and-processing: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,570 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/qu%C3%A9-es-el-panel-de-mercado-y-c%C3%B3mo-se-utiliza
+2025-04-06 21:19:48,571 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/qu%C3%A9-es-el-panel-de-mercado-y-c%C3%B3mo-se-utiliza: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,572 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/what-is-market-dashboard-and-why-to-use-it
+2025-04-06 21:19:48,572 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/what-is-market-dashboard-and-why-to-use-it: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,573 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-faqs
+2025-04-06 21:19:48,573 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-faqs: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,574 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-billing-and-subscription
+2025-04-06 21:19:48,574 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-billing-and-subscription: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,575 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/comment-filtrer-les-annonces-dans-votre-tableau-de-bord
+2025-04-06 21:19:48,575 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/comment-filtrer-les-annonces-dans-votre-tableau-de-bord: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,576 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-faqs-15-2-2024
+2025-04-06 21:19:48,576 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-dashboard-faqs-15-2-2024: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,577 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/creating-a-market-dashboard-15-2-2024
+2025-04-06 21:19:48,578 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/creating-a-market-dashboard-15-2-2024: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,578 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-intel-dashboard
+2025-04-06 21:19:48,579 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/market-intel-dashboard: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,579 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/comprendre-le-nouveau-tableau-de-bord-des-prix
+2025-04-06 21:19:48,580 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/comprendre-le-nouveau-tableau-de-bord-des-prix: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,582 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,582 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboard-how-to-create-and-view-custom-compsets
+2025-04-06 21:19:48,583 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/articles/market-dashboard-how-to-create-and-view-custom-compsets: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,584 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/comprendre-votre-tableau-de-bord-22-1-2021
+2025-04-06 21:19:48,584 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/articles/comprendre-votre-tableau-de-bord-22-1-2021: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,585 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboard-c%C3%B3mo-crear-y-ver-sets-competitivos-personalizados
+2025-04-06 21:19:48,585 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/articles/market-dashboard-c%C3%B3mo-crear-y-ver-sets-competitivos-personalizados: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,587 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,589 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,589 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/creating-a-market-dashboard
+2025-04-06 21:19:48,590 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/creating-a-market-dashboard: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,591 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-use-cases
+2025-04-06 21:19:48,591 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-use-cases: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,593 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,593 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-methodology-data-sources-and-processing
+2025-04-06 21:19:48,594 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-methodology-data-sources-and-processing: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,594 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-billing-and-subscription
+2025-04-06 21:19:48,595 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-billing-and-subscription: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,595 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/creating-a-market-dashboard
+2025-04-06 21:19:48,596 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/creating-a-market-dashboard: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,597 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-faqs
+2025-04-06 21:19:48,598 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-dashboard-faqs: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,598 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-intel-dashboard
+2025-04-06 21:19:48,599 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/market-intel-dashboard: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,601 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,601 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/new-users
+2025-04-06 21:19:48,602 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/de/kb/pricelabs/new-users: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,602 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/pricelabs/new-users
+2025-04-06 21:19:48,603 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pt/kb/pricelabs/new-users: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,603 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/available-integrations
+2025-04-06 21:19:48,604 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/available-integrations: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,604 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/getting-started-with-pricelabs-a-comprehensive-guide
+2025-04-06 21:19:48,605 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/getting-started-with-pricelabs-a-comprehensive-guide: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,605 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/how-to-integrate-pricelabs-with-losjitech
+2025-04-06 21:19:48,606 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/how-to-integrate-pricelabs-with-losjitech: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,606 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/does-pricelabs-cover-my-area
+2025-04-06 21:19:48,607 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/does-pricelabs-cover-my-area: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,607 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/new-users
+2025-04-06 21:19:48,608 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/it/kb/pricelabs/new-users: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,608 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/getting-started
+2025-04-06 21:19:48,609 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/getting-started: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,610 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/what-is-dynamic-pricing-and-how-to-use-it-14-12-2023
+2025-04-06 21:19:48,611 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/what-is-dynamic-pricing-and-how-to-use-it-14-12-2023: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,611 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/what-is-portfolio-analytics-and-how-to-use-it-2-1-2024
+2025-04-06 21:19:48,612 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/what-is-portfolio-analytics-and-how-to-use-it-2-1-2024: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,613 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/how-to-integrate-pricelabs-with-casago
+2025-04-06 21:19:48,614 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/how-to-integrate-pricelabs-with-casago: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,614 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/new-users
+2025-04-06 21:19:48,615 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/fr/kb/pricelabs/new-users: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,615 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/new-users
+2025-04-06 21:19:48,616 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/es/kb/pricelabs/new-users: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,617 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pl/kb/pricelabs/getting-started-with-pricelabs
+2025-04-06 21:19:48,618 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/pl/kb/pricelabs/getting-started-with-pricelabs: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,618 - rag_agent.agent.WebKnowledgeBase - INFO - Fetching fresh content from: https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/how-to-integrate-pricelabs-with-janiis
+2025-04-06 21:19:48,619 - rag_agent.agent.WebKnowledgeBase - ERROR - Error fetching content from https://help.pricelabs.co/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/pricelabs/getting-started-with-pricelabs/portal/en/kb/articles/how-to-integrate-pricelabs-with-janiis: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00ADC7F3+24435]
+	(No symbol) [0x00A62074]
+	(No symbol) [0x0093055E]
+	(No symbol) [0x0096B9D8]
+	(No symbol) [0x0099D676]
+	(No symbol) [0x0099904C]
+	(No symbol) [0x009985C6]
+	(No symbol) [0x00903245]
+	(No symbol) [0x0090379E]
+	(No symbol) [0x00903C1D]
+	GetHandleVerifier [0x00DE70A3+3213347]
+	GetHandleVerifier [0x00DFB0C9+3295305]
+	GetHandleVerifier [0x00DF558C+3271948]
+	GetHandleVerifier [0x00B77360+658144]
+	(No symbol) [0x00A6B27D]
+	(No symbol) [0x00902F10]
+	(No symbol) [0x00902ACA]
+	GetHandleVerifier [0x00E6E9AC+3768620]
+	BaseThreadInitThunk [0x75F55D49+25]
+	RtlInitializeExceptionChain [0x7769CF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x7769CE91+561]
+
+2025-04-06 21:19:48,621 - rag_agent.agent.WebKnowledgeBase - INFO - Saved content to cache: knowledge_cache\help_pricelabs_co_cache.pkl
+2025-04-06 21:19:48,621 - rag_agent.agent.WebKnowledgeBase - INFO - Retrieved 14156 characters of content from 14 pages
+2025-04-06 21:19:48,622 - rag_agent.agent.RAGAgent - INFO - Created 22 chunks from web content
+2025-04-06 21:19:48,622 - rag_agent.agent.RAGAgent - INFO - Creating FAISS index with 22 text chunks
+2025-04-06 22:14:06,409 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-06 22:14:06,725 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-06 22:14:06,732 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-06 22:14:06,735 - rag_agent.agent.RAGAgent - INFO - Saving FAISS index to faiss_cache\help_pricelabs_co_index
+2025-04-06 22:14:06,739 - __main__.ChatInterface - INFO - RAG agent initialized successfully
+2025-04-06 22:14:06,739 - __main__.ChatInterface - INFO - Starting chat interface
+2025-04-06 22:14:06,740 - __main__.ChatInterface - INFO - Welcome message displayed
+2025-04-06 22:14:24,730 - __main__.ChatInterface - INFO - Processing user input: hello
+2025-04-06 22:14:24,731 - rag_agent.agent.RAGAgent - INFO - Processing user query: hello
+2025-04-06 22:14:24,731 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: hello
+2025-04-06 22:14:24,822 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-04-06 22:14:24,823 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-04-06 22:15:03,214 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-04-06 22:15:03,214 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-04-06 22:18:24,713 - __main__.ChatInterface - INFO - Processing user input: how to set up last minute prices
+2025-04-06 22:18:24,714 - rag_agent.agent.RAGAgent - INFO - Processing user query: how to set up last minute prices
+2025-04-06 22:18:24,714 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: how to set up last minute prices
+2025-04-06 22:18:24,765 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-04-06 22:18:24,765 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-04-06 22:19:15,743 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-04-06 22:19:15,743 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-04-06 22:20:09,625 - __main__.ChatInterface - INFO - Processing user input: what is DSO?
+2025-04-06 22:20:09,625 - rag_agent.agent.RAGAgent - INFO - Processing user query: what is DSO?
+2025-04-06 22:20:09,626 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: what is DSO?
+2025-04-06 22:20:09,674 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-04-06 22:20:09,675 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-04-06 22:20:35,387 - rag_agent.agent.RAGAgent - INFO - Successfully generated response
+2025-04-06 22:20:35,388 - rag_agent.agent.RAGAgent - INFO - Successfully processed query
+2025-04-06 22:21:15,018 - __main__.ChatInterface - INFO - Processing user input: what is DSO
+2025-04-06 22:21:15,018 - rag_agent.agent.RAGAgent - INFO - Processing user query: what is DSO
+2025-04-06 22:21:15,019 - rag_agent.agent.RAGAgent - INFO - Getting relevant context for query: what is DSO
+2025-04-06 22:21:15,063 - rag_agent.agent.RAGAgent - INFO - Found 3 relevant documents
+2025-04-06 22:21:15,064 - rag_agent.agent.RAGAgent - INFO - Generating response
+2025-04-06 22:21:25,887 - __main__.ChatInterface - INFO - User interrupted the program
+2025-04-06 22:21:29,993 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013681BE6D50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ba1cff4fb55ef402293f2df64b5083d2
+2025-04-06 22:21:34,083 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013681026F10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ba1cff4fb55ef402293f2df64b5083d2
+2025-04-06 22:21:38,169 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013681026360>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ba1cff4fb55ef402293f2df64b5083d2

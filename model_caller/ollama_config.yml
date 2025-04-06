@@ -1,2 +1,2 @@
 OLLAMA_BASE: "http://localhost:11434/api/generate"
-DEFAULT_MODEL: "deepseek-r1:8b"
+DEFAULT_MODEL: "llama3.2:latest"
